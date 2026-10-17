@@ -1,0 +1,24 @@
+{
+  "name": "queens-academy",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=apps/web",
+    "build": "npm run build --workspace=apps/web",
+    "preview": "npm run preview --workspace=apps/web"
+  },
+  "keywords": [
+    "portfolio",
+    "gsap",
+    "lenis",
+    "vite",
+    "react",
+    "monorepo"
+  ],
+  "author": "",
+  "license": "ISC"
+}
