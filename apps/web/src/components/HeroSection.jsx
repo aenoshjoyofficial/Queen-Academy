@@ -242,7 +242,7 @@ export default function HeroSection() {
     <section ref={sectionRef} className="relative w-full h-[300vh]" id="hero">
       <div
         ref={heroContainerRef}
-        className="w-full h-screen sticky top-0 flex justify-between items-center hero-container px-[4vw] z-2 max-[1025px]:px-[5vw] max-[1025px]:items-start max-[1025px]:pt-[30vw] overflow-hidden"
+        className="w-full h-screen sticky top-0 flex justify-between items-center hero-container px-[4vw] z-2 max-[1025px]:px-[5vw] max-[1025px]:items-start max-[1025px]:pt-[24vw] max-md:pt-[5.5rem] max-md:px-5 overflow-hidden"
         style={{
           backgroundColor: "#0A0A0C",
           backgroundImage: `
@@ -255,23 +255,25 @@ export default function HeroSection() {
       >
         <div
           ref={heroTextRef}
-          className="w-full h-fit flex justify-between max-[1025px]:flex-col max-[1025px]:gap-8"
+          className="w-full h-fit flex justify-between relative z-10 max-[1025px]:flex-col max-[1025px]:gap-6 max-md:gap-3"
         >
-          <div className="w-[45%] leading-30! max-[1025px]:w-[62%] max-md:w-full">
+          <div className="w-[45%] leading-30! max-[1025px]:w-[70%] max-md:w-full">
             <TextSplitter stagger={0.015} start={startHeading}>
-              <h1 className="text-[7.5vw] text-[#F7F5F0] max-[1025px]:text-[12vw] max-md:text-[15vw] leading-[1.1]! font-medium">
+              <h1 className="text-[7.5vw] text-[#F7F5F0] max-[1025px]:text-[10vw] max-md:text-[11vw] max-sm:text-[10.5vw] leading-[1.08]! font-medium drop-shadow-md">
                 Crown the Icon Within You
               </h1>
             </TextSplitter>
           </div>
 
-          <div className="w-[10%] flex flex-col justify-between text-end text-[1.25vw] leading-[1.15] py-[2vw] max-[1025px]:w-[40%] max-[1025px]:text-[3.5vw] max-[1025px]:text-start max-[1025px]:flex-col-reverse max-md:text-[4.5vw] max-md:gap-[7vw] max-[1025px]:gap-20 max-md:py-0">
+          <div className="w-[12%] flex flex-col justify-between text-end text-[1.25vw] leading-[1.15] py-[2vw] max-[1025px]:w-full max-[1025px]:text-start max-[1025px]:flex-row max-[1025px]:items-center max-[1025px]:justify-between max-[1025px]:py-0 max-md:flex-col max-md:items-start max-md:gap-1.5">
             <TextSplitter splitBy="lines" start={startSubtitle}>
-              <p className="text-[#F0C888] font-medium">Global Runway Training</p>
+              <p className="text-[#F0C888] font-medium max-[1025px]:text-[2.6vw] max-md:text-[3.8vw]">
+                Global Runway Training
+              </p>
             </TextSplitter>
             <TextSplitter splitBy="lines" start={startSubtitle}>
-              <p className="text-[#B8B6B0]">
-                Elite Fashion &<br />Model Academy
+              <p className="text-[#B8B6B0] max-[1025px]:text-[2.2vw] max-md:text-[3.2vw]">
+                Elite Fashion & Model Academy
               </p>
             </TextSplitter>
           </div>
@@ -279,13 +281,13 @@ export default function HeroSection() {
 
         <div
           ref={heroMaskRef}
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[97vh] w-[78vw] max-w-[1060px] max-[1025px]:w-[90vw] max-[1025px]:h-[88vh] max-md:w-[100vw] max-md:h-[78vh] hero-av-img hero-mask-reveal opacity-0 pointer-events-none"
+          className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[96vh] w-[78vw] max-w-[1060px] max-[1025px]:w-[85vw] max-[1025px]:h-[82vh] max-md:w-[130vw] max-md:h-[84vh] max-sm:w-[135vw] max-sm:h-[82vh] hero-av-img hero-mask-reveal opacity-0 pointer-events-none z-1"
         >
-          <div ref={heroImageWrapRef} className="w-full h-full">
+          <div ref={heroImageWrapRef} className="w-full h-full flex items-end justify-center">
             <img
               src={heroImg}
               alt="Elena Voss in Motion"
-              className="w-full h-full object-contain object-bottom select-none pointer-events-none"
+              className="w-full h-full object-contain object-bottom select-none pointer-events-none drop-shadow-[0_20px_45px_rgba(0,0,0,0.85)] max-md:scale-120 max-sm:scale-125 origin-bottom"
               draggable={false}
               loading="eager"
             />

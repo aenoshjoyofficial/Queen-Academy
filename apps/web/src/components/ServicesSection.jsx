@@ -203,8 +203,8 @@ export default function ServicesSection() {
                   onMouseEnter={() => handleCardHover(idx)}
                   className={`services-card ${
                     prefersReduced
-                      ? "relative rounded-lg p-[1.6vw] flex flex-col justify-between bg-[#1A1A1D] overflow-hidden min-h-[22vw] max-[1025px]:min-h-[32vw] max-[1025px]:p-[3vw] max-md:min-h-0 max-md:p-[5vw] border border-[#3A3937]"
-                      : "relative w-[27vw] h-[30vw] shrink-0 rounded-lg p-[1.6vw] flex flex-col justify-between bg-[#1A1A1D] overflow-hidden max-[1025px]:w-[55vw] max-[1025px]:h-[65vw] max-[1025px]:p-[3vw] max-md:w-[75vw] max-md:h-[85vw] max-md:p-[5vw] border border-[#3A3937] group"
+                      ? "relative rounded-2xl p-[1.6vw] flex flex-col justify-between bg-[#1A1A1D] overflow-hidden min-h-[22vw] max-[1025px]:min-h-[32vw] max-[1025px]:p-[3vw] max-md:min-h-0 max-md:p-6 border border-[#3A3937]"
+                      : "relative w-[27vw] h-[30vw] shrink-0 rounded-2xl p-[1.6vw] flex flex-col justify-between bg-[#1A1A1D] overflow-hidden max-[1025px]:w-[55vw] max-[1025px]:h-[65vw] max-[1025px]:p-[3vw] max-md:w-[82vw] max-md:h-[68vh] max-md:max-h-[500px] max-md:p-6 border border-[#3A3937] group shadow-xl"
                   }`}
                 >
                   {/* Card Background Image */}

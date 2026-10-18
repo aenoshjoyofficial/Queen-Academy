@@ -63,17 +63,17 @@ function TestimonialCard({ item, onSwipe }) {
         if (info.offset.x > 100) onSwipe("prev");
         else if (info.offset.x < -100) onSwipe("next");
       }}
-      className="pt-[8vw] pb-[4vw] px-[6vw] w-full h-full flex flex-col items-center justify-center gap-[2.5vw] text-center max-[1025px]:pt-[14vw] max-[1025px]:px-[8vw] max-[1025px]:gap-[4vw] max-md:pt-[22vw] max-md:px-[7vw] max-md:pb-[8vw] max-md:gap-[6vw]"
+      className="pt-[8vw] pb-[4vw] px-[6vw] w-full h-full flex flex-col items-center justify-center gap-[2.5vw] text-center max-[1025px]:pt-[14vw] max-[1025px]:px-[8vw] max-[1025px]:gap-[4vw] max-md:pt-16 max-md:pb-8 max-md:px-6 max-md:gap-4"
     >
-      <div className="flex flex-col gap-[0.4vw] max-md:gap-2">
-        <p className="text-[2.6vw] text-[#F0C888] max-[1025px]:text-[4vw] max-md:text-[6vw] font-medium">
+      <div className="flex flex-col gap-[0.4vw] max-md:gap-1">
+        <p className="text-[2.6vw] text-[#F0C888] max-[1025px]:text-[4vw] max-md:text-[5.2vw] font-medium">
           {item.name}
         </p>
-        <p className="text-[1.145vw] text-[#B8B6B0] max-[1025px]:text-[2.2vw] max-md:text-[3.6vw]">
+        <p className="text-[1.145vw] text-[#B8B6B0] max-[1025px]:text-[2.2vw] max-md:text-[3.2vw]">
           {item.role}
         </p>
       </div>
-      <p className="text-[1.145vw] leading-[1.6] text-[#F7F5F0]/90 w-[82%] max-[1025px]:text-[2.2vw] max-[1025px]:w-full max-md:text-[3.6vw]">
+      <p className="text-[1.145vw] leading-[1.6] text-[#F7F5F0]/90 w-[82%] max-[1025px]:text-[2.2vw] max-[1025px]:w-full max-md:text-[3.4vw] max-md:leading-relaxed">
         “{item.quote}”
       </p>
     </motion.div>
@@ -142,7 +142,7 @@ export default function TestimonialsSection() {
 
         <div className="relative max-md:mt-10">
           {/* Main Testimonial Card */}
-          <div className="testimonial-fade opacity-0 relative w-3/5 mx-auto rounded-[2vw] border border-[#3A3937] bg-[#111113] overflow-hidden max-[1025px]:w-full max-[1025px]:rounded-[5vw] h-[30vw] max-[1025px]:h-[52vw] max-md:h-[95vw] shadow-2xl">
+          <div className="testimonial-fade opacity-0 relative w-3/5 mx-auto rounded-[2vw] border border-[#3A3937] bg-[#111113] overflow-hidden max-[1025px]:w-full max-[1025px]:rounded-[5vw] h-[30vw] max-[1025px]:h-[52vw] max-md:h-auto max-md:min-h-[380px] shadow-2xl">
             <AnimatePresence mode="wait">
               <TestimonialCard
                 key={testimonials[currentIndex].name}

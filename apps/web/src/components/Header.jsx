@@ -58,8 +58,8 @@ export default function Header() {
   return (
     <header
       ref={headerRef}
-      className={`w-full h-[5rem] max-[1025px]:h-[4.5rem] max-md:h-[4rem] flex items-center justify-between px-[4vw] fixed top-0 left-0 right-0 z-50 transition-[backdrop-filter] duration-500 ease-out max-[1025px]:px-[5vw] ${
-        scrolled ? "backdrop-blur-lg bg-[#0A0A0C]/75 border-b border-[#3A3937]/50" : "backdrop-blur-none"
+      className={`w-full h-[5rem] max-[1025px]:h-[4.5rem] max-md:h-[3.8rem] flex items-center justify-between px-[4vw] fixed top-0 left-0 right-0 z-50 transition-[backdrop-filter] duration-500 ease-out max-[1025px]:px-[5vw] max-md:px-4 ${
+        scrolled ? "backdrop-blur-lg bg-[#0A0A0C]/85 border-b border-[#3A3937]/50" : "backdrop-blur-none"
       }`}
       id="header"
     >
@@ -67,7 +67,7 @@ export default function Header() {
         <img
           src={logoImg}
           alt="Queens Academy Logo"
-          className="h-[4rem] max-[1025px]:h-[3.5rem] max-md:h-[3rem] w-auto object-contain"
+          className="h-[4rem] max-[1025px]:h-[3.4rem] max-md:h-[2.6rem] w-auto object-contain"
         />
       </a>
 
@@ -78,8 +78,8 @@ export default function Header() {
           e.preventDefault();
           openModal();
         }}
-        className="border border-[#3A3937]!"
-        textClassName="font-medium text-[1.15vw] max-[1025px]:text-[3vw] max-md:text-[4.2vw]"
+        className="border border-[#3A3937]! max-md:!h-[2.3rem] max-md:!px-3.5"
+        textClassName="font-medium text-[1.15vw] max-[1025px]:text-[2.2vw] max-md:!text-[0.78rem]"
         bgColor="#D4AF37"
         dotColor="#0A0A0C"
         hoverTextColor="#F7F5F0"
