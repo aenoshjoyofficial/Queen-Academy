@@ -10,6 +10,7 @@
 
 :root {
   --font-host-grotesk: 'Host Grotesk', system-ui, -apple-system, sans-serif;
+  --font-pageant: 'Cinzel Decorative', 'Cinzel', serif;
   --default-ease: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -44,6 +45,16 @@ body {
 
 .elenavoss-body * {
   font-family: var(--font-host-grotesk), sans-serif;
+}
+
+.hero-title,
+.hero-title * {
+  font-family: var(--font-pageant) !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.03em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .elenavoss-body ::selection {
