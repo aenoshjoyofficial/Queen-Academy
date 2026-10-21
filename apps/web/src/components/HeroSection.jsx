@@ -242,7 +242,7 @@ export default function HeroSection() {
     <section ref={sectionRef} className="relative w-full h-[300vh]" id="hero">
       <div
         ref={heroContainerRef}
-        className="w-full h-screen sticky top-0 flex justify-between items-center hero-container px-[4vw] z-2 max-[1025px]:px-[5vw] max-[1025px]:items-start max-[1025px]:pt-[24vw] max-md:pt-[5.5rem] max-md:px-5 overflow-hidden"
+        className="w-full h-screen sticky top-0 flex justify-between items-center hero-container px-[4vw] z-2 max-[1025px]:px-[5vw] max-[1025px]:items-start max-[1025px]:pt-[24vw] max-md:pt-[4.2rem] max-md:px-5 overflow-hidden"
         style={{
           backgroundColor: "#0A0A0C",
           backgroundImage: `
@@ -281,13 +281,13 @@ export default function HeroSection() {
 
         <div
           ref={heroMaskRef}
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[96vh] w-[78vw] max-w-[1060px] max-[1025px]:w-[85vw] max-[1025px]:h-[82vh] max-md:w-[130vw] max-md:h-[84vh] max-sm:w-[135vw] max-sm:h-[82vh] hero-av-img hero-mask-reveal opacity-0 pointer-events-none z-1"
+          className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[96vh] w-[78vw] max-w-[1060px] max-[1025px]:w-[85vw] max-[1025px]:h-[82vh] max-md:w-[125vw] max-md:h-[68vh] max-sm:w-[130vw] max-sm:h-[66vh] hero-av-img hero-mask-reveal opacity-0 pointer-events-none z-1"
         >
           <div ref={heroImageWrapRef} className="w-full h-full flex items-end justify-center">
             <img
               src={heroImg}
               alt="Elena Voss in Motion"
-              className="w-full h-full object-contain object-bottom select-none pointer-events-none drop-shadow-[0_20px_45px_rgba(0,0,0,0.85)] max-md:scale-120 max-sm:scale-125 origin-bottom"
+              className="w-full h-full object-contain object-bottom select-none pointer-events-none drop-shadow-[0_20px_45px_rgba(0,0,0,0.85)] max-md:scale-105 max-sm:scale-108 origin-bottom"
               draggable={false}
               loading="eager"
             />
