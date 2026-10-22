@@ -57,6 +57,24 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+@media (min-width: 768px) and (max-width: 1025px) {
+  .hero-title .hero-title-line {
+    display: block !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-title .hero-title-line {
+    display: inline !important;
+  }
+}
+
+@media (min-width: 1026px) {
+  .hero-title .hero-title-line {
+    display: inline !important;
+  }
+}
+
 .elenavoss-body ::selection {
   color: #0A0A0C;
   background-color: #D4AF37;
