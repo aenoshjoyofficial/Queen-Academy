@@ -242,7 +242,7 @@ export default function HeroSection() {
     <section ref={sectionRef} className="relative w-full h-[300vh]" id="hero">
       <div
         ref={heroContainerRef}
-        className="w-full h-screen sticky top-0 flex justify-between items-center hero-container px-[4vw] z-2 max-[1025px]:px-[5vw] max-[1025px]:flex-col max-[1025px]:justify-between max-[1025px]:items-center max-[1025px]:pt-[4.8rem] max-[1025px]:pb-0 max-md:pt-[4.0rem] max-md:px-4 overflow-hidden"
+        className="w-full h-screen sticky top-0 flex justify-between items-center hero-container px-[4vw] z-2 max-[1025px]:px-[5vw] max-[1025px]:flex-col max-[1025px]:justify-start max-[1025px]:items-center max-[1025px]:gap-[5px] max-[1025px]:pt-[4.8rem] max-[1025px]:pb-0 max-md:pt-[4.0rem] max-md:px-4 overflow-hidden"
         style={{
           backgroundColor: "#0A0A0C",
           backgroundImage: `
@@ -281,13 +281,13 @@ export default function HeroSection() {
 
         <div
           ref={heroMaskRef}
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[96vh] w-[78vw] max-w-[1060px] hero-av-img hero-mask-reveal opacity-0 pointer-events-none z-2 max-[1025px]:relative max-[1025px]:bottom-auto max-[1025px]:left-auto max-[1025px]:translate-x-0 max-[1025px]:w-full max-[1025px]:flex-1 max-[1025px]:min-h-0 max-[1025px]:max-h-full"
+          className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[96vh] w-[78vw] max-w-[1060px] hero-av-img hero-mask-reveal opacity-0 pointer-events-none z-2 max-[1025px]:relative max-[1025px]:bottom-auto max-[1025px]:left-auto max-[1025px]:translate-x-0 max-[1025px]:w-full max-[1025px]:flex-1 max-[1025px]:min-h-0 max-[1025px]:max-h-full max-[1025px]:overflow-hidden"
         >
-          <div ref={heroImageWrapRef} className="w-full h-full flex items-end justify-center">
+          <div ref={heroImageWrapRef} className="w-full h-full flex items-end justify-center max-[1025px]:items-start">
             <img
               src={heroImg}
               alt="Elena Voss in Motion"
-              className="w-full h-full object-contain object-bottom select-none pointer-events-none drop-shadow-[0_20px_45px_rgba(0,0,0,0.85)] origin-bottom"
+              className="w-full h-full object-contain object-bottom select-none pointer-events-none drop-shadow-[0_20px_45px_rgba(0,0,0,0.85)] origin-bottom max-[1025px]:object-cover max-[1025px]:object-top max-[1025px]:origin-top"
               draggable={false}
               loading="eager"
             />
