@@ -17,9 +17,9 @@ const DIRECTIONS = {
 function splitElement(element, type = "chars") {
   const text = element.textContent || "";
   element.setAttribute("data-split-orig", text);
-  element.innerHTML = "";
 
   if (type === "lines") {
+    element.innerHTML = "";
     // Wrap lines
     const lineWrapper = document.createElement("span");
     lineWrapper.style.display = "inline-block";
@@ -36,6 +36,88 @@ function splitElement(element, type = "chars") {
 
   // Split into characters
   const chars = [];
+
+  // If element has element children (e.g. <span> or <br>), process each child node to preserve block structure
+  if (element.children.length > 0) {
+    const childNodes = Array.from(element.childNodes);
+    element.innerHTML = "";
+    childNodes.forEach((node) => {
+      if (node.nodeType === Node.ELEMENT_NODE) {
+        if (node.tagName.toLowerCase() === "br") {
+          element.appendChild(node.cloneNode(true));
+        } else {
+          const wrapper = node.cloneNode(false);
+          const childText = node.textContent || "";
+          wrapper.setAttribute("data-split-orig", childText);
+          const words = childText.split(" ");
+          words.forEach((word, wordIdx) => {
+            const wordSpan = document.createElement("span");
+            wordSpan.style.display = "inline-block";
+            wordSpan.style.whiteSpace = "nowrap";
+
+            [...word].forEach((char) => {
+              const charWrapper = document.createElement("span");
+              charWrapper.style.display = "inline-block";
+              charWrapper.style.overflow = "hidden";
+              charWrapper.style.verticalAlign = "top";
+              charWrapper.style.paddingInline = "0.04em";
+              charWrapper.style.marginInline = "-0.04em";
+              charWrapper.style.boxSizing = "content-box";
+
+              const charInner = document.createElement("span");
+              charInner.style.display = "inline-block";
+              charInner.textContent = char;
+
+              charWrapper.appendChild(charInner);
+              wordSpan.appendChild(charWrapper);
+              chars.push(charInner);
+            });
+
+            wrapper.appendChild(wordSpan);
+            if (wordIdx < words.length - 1) {
+              wrapper.appendChild(document.createTextNode(" "));
+            }
+          });
+          element.appendChild(wrapper);
+        }
+      } else if (node.nodeType === Node.TEXT_NODE) {
+        const textVal = node.textContent.trim();
+        if (textVal) {
+          const words = textVal.split(" ");
+          words.forEach((word, wordIdx) => {
+            const wordSpan = document.createElement("span");
+            wordSpan.style.display = "inline-block";
+            wordSpan.style.whiteSpace = "nowrap";
+
+            [...word].forEach((char) => {
+              const charWrapper = document.createElement("span");
+              charWrapper.style.display = "inline-block";
+              charWrapper.style.overflow = "hidden";
+              charWrapper.style.verticalAlign = "top";
+              charWrapper.style.paddingInline = "0.04em";
+              charWrapper.style.marginInline = "-0.04em";
+              charWrapper.style.boxSizing = "content-box";
+
+              const charInner = document.createElement("span");
+              charInner.style.display = "inline-block";
+              charInner.textContent = char;
+
+              charWrapper.appendChild(charInner);
+              wordSpan.appendChild(charWrapper);
+              chars.push(charInner);
+            });
+
+            element.appendChild(wordSpan);
+            if (wordIdx < words.length - 1) {
+              element.appendChild(document.createTextNode(" "));
+            }
+          });
+        }
+      }
+    });
+    return chars;
+  }
+
   const words = text.split(" ");
 
   words.forEach((word, wordIdx) => {

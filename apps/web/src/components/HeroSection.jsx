@@ -259,20 +259,22 @@ export default function HeroSection() {
         >
           <div className="w-[45%] leading-30! max-[1025px]:w-full max-[1025px]:text-center max-md:w-full max-md:text-center max-md:px-2 relative z-1 max-[1025px]:z-10 pointer-events-auto">
             <TextSplitter stagger={0.015} start={startHeading}>
-              <h1 className="hero-title text-[7.5vw] text-[#F7F5F0] max-[1025px]:text-[clamp(1.75rem,5.6vw,3.2rem)] max-md:text-[clamp(1.5rem,8.4vw,2.5rem)] leading-[1.12]! font-bold drop-shadow-lg pb-0.5">
-                Crown the Icon Within You
+              <h1 className="hero-title text-[7.5vw] text-[#F7F5F0] max-[1025px]:text-[clamp(2.4rem,4.8vw,3.6rem)] max-md:text-[clamp(1.5rem,8.4vw,2.5rem)] leading-[1.08]! font-bold drop-shadow-lg pb-0.5">
+                <span className="max-[1025px]:block max-md:inline">Crown The </span>
+                <span className="max-[1025px]:block max-md:inline">Icon Within </span>
+                <span className="max-[1025px]:block max-md:inline">You</span>
               </h1>
             </TextSplitter>
           </div>
 
           <div className="w-[12%] flex flex-col justify-between text-end text-[1.25vw] leading-[1.15] py-[2vw] max-[1025px]:w-full max-[1025px]:text-center max-[1025px]:flex-col max-[1025px]:items-center max-[1025px]:gap-0.5 max-[1025px]:py-0 max-md:flex-col max-md:items-center max-md:text-center max-md:gap-0.5 relative z-3 max-[1025px]:z-10 pointer-events-auto">
             <TextSplitter splitBy="lines" start={startSubtitle}>
-              <p className="text-[#F0C888] font-medium tracking-[0.04em] uppercase text-[0.85rem] max-[1025px]:text-[clamp(0.72rem,1.8vw,0.95rem)] max-md:text-[clamp(0.68rem,3.2vw,0.85rem)]">
+              <p className="text-[#F0C888] font-medium tracking-[0.04em] uppercase text-[0.85rem] max-[1025px]:text-[clamp(0.95rem,2.2vw,1.2rem)] max-md:text-[clamp(0.68rem,3.2vw,0.85rem)]">
                 Global Runway Training
               </p>
             </TextSplitter>
             <TextSplitter splitBy="lines" start={startSubtitle}>
-              <p className="text-[#B8B6B0] tracking-[0.03em] max-[1025px]:text-[clamp(0.65rem,1.5vw,0.85rem)] max-md:text-[clamp(0.62rem,2.8vw,0.78rem)]">
+              <p className="text-[#B8B6B0] tracking-[0.03em] max-[1025px]:text-[clamp(0.85rem,1.9vw,1.05rem)] max-md:text-[clamp(0.62rem,2.8vw,0.78rem)]">
                 Elite Fashion & Model Academy
               </p>
             </TextSplitter>

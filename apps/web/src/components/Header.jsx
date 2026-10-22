@@ -72,7 +72,7 @@ export default function Header() {
       </a>
 
       <PillButton
-        btnText="Apply for Admission"
+        btnText="Apply Now"
         href="#"
         onClick={(e) => {
           e.preventDefault();
