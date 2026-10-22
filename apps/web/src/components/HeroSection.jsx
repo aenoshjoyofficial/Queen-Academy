@@ -242,7 +242,7 @@ export default function HeroSection() {
     <section ref={sectionRef} className="relative w-full h-[300vh]" id="hero">
       <div
         ref={heroContainerRef}
-        className="w-full h-screen sticky top-0 flex justify-between items-center hero-container px-[4vw] z-2 max-[1025px]:px-0 max-[1025px]:flex-col max-[1025px]:justify-start max-[1025px]:items-center max-[1025px]:gap-[5px] max-[1025px]:pt-[4.8rem] max-[1025px]:pb-0 max-md:pt-[4.0rem] max-md:px-0 overflow-hidden"
+        className="w-full h-screen sticky top-0 flex justify-between items-center hero-container px-[4vw] z-2 max-[1025px]:px-0 max-[1025px]:flex-col max-[1025px]:justify-start max-[1025px]:items-center max-[1025px]:gap-[5px] max-[1025px]:pt-[5.5rem] max-[1025px]:pb-0 max-md:pt-[4.5rem] max-md:px-0 overflow-hidden"
         style={{
           backgroundColor: "#0A0A0C",
           backgroundImage: `
@@ -259,7 +259,7 @@ export default function HeroSection() {
         >
           <div className="w-[45%] leading-30! max-[1025px]:w-full max-[1025px]:text-center max-md:w-full max-md:text-center max-md:px-2 relative z-1 max-[1025px]:z-10 pointer-events-auto">
             <TextSplitter stagger={0.015} start={startHeading}>
-              <h1 className="hero-title text-[7.5vw] text-[#F7F5F0] max-[1025px]:text-[clamp(2.4rem,4.8vw,3.6rem)] max-md:text-[clamp(1.5rem,8.4vw,2.5rem)] leading-[1.08]! font-bold drop-shadow-lg pb-0.5 mt-3.5 max-[1025px]:mt-4 max-md:mt-2">
+              <h1 className="hero-title text-[7.5vw] text-[#F7F5F0] max-[1025px]:text-[clamp(2.4rem,4.8vw,3.6rem)] max-md:text-[clamp(1.5rem,8.4vw,2.5rem)] leading-[1.08]! font-bold drop-shadow-lg pb-0.5 mt-4 max-[1025px]:mt-6 max-md:mt-4">
                 <span className="hero-title-line max-[1025px]:block max-md:inline">Crown The </span>
                 <span className="hero-title-line max-[1025px]:block max-md:inline">Icon Within </span>
                 <span className="hero-title-line max-[1025px]:block max-md:inline">You</span>
