@@ -259,7 +259,7 @@ export default function HeroSection() {
         >
           <div className="w-[45%] leading-30! max-[1025px]:w-full max-[1025px]:text-center max-md:w-full max-md:text-center max-md:px-2 relative z-1 max-[1025px]:z-10 pointer-events-auto">
             <TextSplitter stagger={0.015} start={startHeading}>
-              <h1 className="hero-title text-[7.5vw] text-[#F7F5F0] max-[1025px]:text-[8.5vw] max-md:text-[13vw] max-sm:text-[12.2vw] leading-[1.12]! font-bold drop-shadow-lg pb-1">
+              <h1 className="hero-title text-[7.5vw] text-[#F7F5F0] max-[1025px]:text-[7.2vw] max-md:text-[13vw] max-sm:text-[12.2vw] leading-[1.12]! font-bold drop-shadow-lg pb-1">
                 Crown the Icon Within You
               </h1>
             </TextSplitter>
@@ -267,12 +267,12 @@ export default function HeroSection() {
 
           <div className="w-[12%] flex flex-col justify-between text-end text-[1.25vw] leading-[1.15] py-[2vw] max-[1025px]:w-full max-[1025px]:text-center max-[1025px]:flex-col max-[1025px]:items-center max-[1025px]:gap-1 max-[1025px]:py-0 max-md:flex-col max-md:items-center max-md:text-center max-md:gap-1 max-md:pt-1 relative z-3 max-[1025px]:z-10 pointer-events-auto">
             <TextSplitter splitBy="lines" start={startSubtitle}>
-              <p className="text-[#F0C888] font-medium tracking-[0.04em] uppercase text-[0.85rem] max-[1025px]:text-[2.2vw] max-md:text-[3.6vw] max-sm:text-[3.4vw]">
+              <p className="text-[#F0C888] font-medium tracking-[0.04em] uppercase text-[0.85rem] max-[1025px]:text-[2.0vw] max-md:text-[3.6vw] max-sm:text-[3.4vw]">
                 Global Runway Training
               </p>
             </TextSplitter>
             <TextSplitter splitBy="lines" start={startSubtitle}>
-              <p className="text-[#B8B6B0] tracking-[0.03em] max-[1025px]:text-[1.9vw] max-md:text-[3.4vw] max-sm:text-[3.1vw]">
+              <p className="text-[#B8B6B0] tracking-[0.03em] max-[1025px]:text-[1.7vw] max-md:text-[3.4vw] max-sm:text-[3.1vw]">
                 Elite Fashion & Model Academy
               </p>
             </TextSplitter>
@@ -281,7 +281,7 @@ export default function HeroSection() {
 
         <div
           ref={heroMaskRef}
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[96vh] w-[78vw] max-w-[1060px] max-[1025px]:w-[85vw] max-[1025px]:h-[82vh] max-[1025px]:translate-y-[8vh] max-md:translate-y-0 max-md:w-[125vw] max-md:h-[68vh] max-sm:w-[130vw] max-sm:h-[66vh] hero-av-img hero-mask-reveal opacity-0 pointer-events-none z-2"
+          className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[96vh] w-[78vw] max-w-[1060px] max-[1025px]:w-[85vw] max-[1025px]:h-[82vh] max-[1025px]:translate-y-[14vh] max-md:translate-y-0 max-md:w-[125vw] max-md:h-[68vh] max-sm:w-[130vw] max-sm:h-[66vh] hero-av-img hero-mask-reveal opacity-0 pointer-events-none z-2"
         >
           <div ref={heroImageWrapRef} className="w-full h-full flex items-end justify-center">
             <img
