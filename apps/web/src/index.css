@@ -57,7 +57,8 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-@media (min-width: 768px) and (max-width: 1025px) {
+@media (min-width: 768px) and (max-width: 1200px) and (orientation: portrait),
+       (min-width: 768px) and (max-width: 1025px) {
   .hero-title .hero-title-line {
     display: block !important;
   }
@@ -69,9 +70,52 @@ body {
   }
 }
 
-@media (min-width: 1026px) {
+@media (min-width: 1201px), (min-width: 1026px) and (orientation: landscape) {
   .hero-title .hero-title-line {
     display: inline !important;
+  }
+}
+
+/* Tablet in portrait (including Xiaomi Pad 6 up to 1200px) */
+@media (max-width: 1200px) and (orientation: portrait) {
+  .hero-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 5px !important;
+    padding-top: 4.8rem !important;
+    padding-bottom: 0 !important;
+  }
+  .hero-container > div:first-child {
+    padding-left: 5vw !important;
+    padding-right: 5vw !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    flex-shrink: 0 !important;
+    gap: 0.5rem !important;
+  }
+  .hero-container .hero-title {
+    font-size: clamp(2.4rem, 4.8vw, 3.6rem) !important;
+    line-height: 1.08 !important;
+    text-align: center !important;
+  }
+  .hero-container .hero-av-img {
+    position: relative !important;
+    bottom: auto !important;
+    left: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    flex: 1 1 0% !important;
+    min-height: 0 !important;
+    max-height: 100% !important;
+    overflow: hidden !important;
+  }
+  .hero-container .hero-av-img img {
+    object-fit: cover !important;
+    object-position: top center !important;
+    transform-origin: top center !important;
   }
 }
 
