@@ -259,7 +259,7 @@ export default function HeroSection() {
         >
           <div className="w-[45%] leading-30! max-[1025px]:w-full max-[1025px]:text-center max-md:w-full max-md:text-center max-md:px-2 relative z-1 max-[1025px]:z-10 pointer-events-auto">
             <TextSplitter stagger={0.015} start={startHeading}>
-              <h1 className="hero-title text-[7.5vw] text-[#F7F5F0] max-[1025px]:text-[clamp(2.4rem,4.8vw,3.6rem)] max-md:text-[clamp(1.5rem,8.4vw,2.5rem)] leading-[1.08]! font-bold drop-shadow-lg pb-0.5">
+              <h1 className="hero-title text-[7.5vw] text-[#F7F5F0] max-[1025px]:text-[clamp(2.4rem,4.8vw,3.6rem)] max-md:text-[clamp(1.5rem,8.4vw,2.5rem)] leading-[1.08]! font-bold drop-shadow-lg pb-0.5 mt-3.5 max-[1025px]:mt-4 max-md:mt-2">
                 <span className="hero-title-line max-[1025px]:block max-md:inline">Crown The </span>
                 <span className="hero-title-line max-[1025px]:block max-md:inline">Icon Within </span>
                 <span className="hero-title-line max-[1025px]:block max-md:inline">You</span>
