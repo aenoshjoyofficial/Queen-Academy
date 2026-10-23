@@ -145,7 +145,7 @@ body {
 
 .marquee-1 {
   will-change: transform;
-  animation: 10s linear infinite marquee-scroll-y;
+  animation: 24s linear infinite marquee-scroll-y;
 }
 
 @keyframes marquee-scroll-y {
@@ -159,7 +159,7 @@ body {
 
 .marquee-2 {
   will-change: transform;
-  animation: 18s linear infinite marquee-scroll-y-2;
+  animation: 36s linear infinite marquee-scroll-y-2;
 }
 
 @keyframes marquee-scroll-y-2 {
@@ -173,7 +173,7 @@ body {
 
 .marquee-3 {
   will-change: transform;
-  animation: 14s linear infinite marquee-scroll-y-3;
+  animation: 30s linear infinite marquee-scroll-y-3;
 }
 
 @keyframes marquee-scroll-y-3 {

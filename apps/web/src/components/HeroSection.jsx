@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLenis } from "lenis/react";
 import TextSplitter from "./TextSplitter";
+import GradientWave from "./GradientWave";
 
 import heroImg from "../assets/HeroImage.png";
 import reel1 from "../assets/reel-1.jpg";
@@ -253,6 +254,14 @@ export default function HeroSection() {
           `,
         }}
       >
+        {/* Transparent animated gradient wave background */}
+        <GradientWave
+          opacity={0.55}
+          blendMode="screen"
+          speed={0.040}
+          amplitude={48}
+        />
+
         <div
           ref={heroTextRef}
           className="w-full h-fit flex justify-between relative pointer-events-none max-[1025px]:px-[5vw] max-[1025px]:flex-col max-[1025px]:items-center max-[1025px]:shrink-0 max-[1025px]:gap-2 max-md:px-4 max-md:gap-1.5"
