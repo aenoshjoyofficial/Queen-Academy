@@ -15,6 +15,13 @@ const DIRECTIONS = {
  * Splits DOM text nodes in an element into masked lines or characters.
  */
 function splitElement(element, type = "chars") {
+  // If element was previously split, restore its original inner HTML before splitting again
+  if (element.__origInnerHTML !== undefined) {
+    element.innerHTML = element.__origInnerHTML;
+  } else {
+    element.__origInnerHTML = element.innerHTML;
+  }
+
   const text = element.textContent || "";
   element.setAttribute("data-split-orig", text);
 
@@ -198,7 +205,14 @@ export default function TextSplitter({
       } else {
         gsap.to(container, anim);
       }
-      return;
+      return () => {
+        elementsToSplit.forEach((el) => {
+          if (el.__origInnerHTML !== undefined) {
+            el.innerHTML = el.__origInnerHTML;
+            delete el.__origInnerHTML;
+          }
+        });
+      };
     }
 
     const dirConfig = DIRECTIONS[direction] || DIRECTIONS.bottom;
@@ -240,6 +254,12 @@ export default function TextSplitter({
     return () => {
       tween?.scrollTrigger?.kill();
       tween?.kill();
+      elementsToSplit.forEach((el) => {
+        if (el.__origInnerHTML !== undefined) {
+          el.innerHTML = el.__origInnerHTML;
+          delete el.__origInnerHTML;
+        }
+      });
     };
   }, [start, splitBy, direction, delay, duration, stagger, animateOnScroll, scrub]);
 
