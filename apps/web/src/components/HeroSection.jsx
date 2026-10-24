@@ -264,7 +264,7 @@ export default function HeroSection() {
 
         <div
           ref={heroTextRef}
-          className="w-full h-fit flex justify-between relative pointer-events-none max-[1025px]:px-[5vw] max-[1025px]:flex-col max-[1025px]:items-center max-[1025px]:shrink-0 max-[1025px]:gap-2 max-md:px-4 max-md:gap-1.5"
+          className="hero-text-content w-full h-fit flex justify-between relative pointer-events-none max-[1025px]:px-[5vw] max-[1025px]:flex-col max-[1025px]:items-center max-[1025px]:shrink-0 max-[1025px]:gap-2 max-md:px-4 max-md:gap-1.5"
         >
           <div className="w-[45%] leading-30! max-[1025px]:w-full max-[1025px]:text-center max-md:w-full max-md:text-center max-md:px-2 relative z-1 max-[1025px]:z-10 pointer-events-auto">
             <TextSplitter stagger={0.015} start={startHeading}>

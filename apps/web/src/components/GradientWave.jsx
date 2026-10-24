@@ -69,6 +69,8 @@ export default function GradientWave({
     };
 
     resize();
+    window.addEventListener("resize", resize);
+    window.addEventListener("orientationchange", resize);
     const resizeObserver = new ResizeObserver(resize);
     resizeObserver.observe(canvas);
 
@@ -143,20 +145,22 @@ export default function GradientWave({
 
     return () => {
       if (animationFrameId) cancelAnimationFrame(animationFrameId);
+      window.removeEventListener("resize", resize);
+      window.removeEventListener("orientationchange", resize);
       resizeObserver.disconnect();
     };
   }, [colors, speed, amplitude, frequency]);
 
   return (
     <div
-      className={`absolute top-0 left-1/2 -translate-x-1/2 w-screen min-w-full h-full min-h-screen pointer-events-none overflow-hidden select-none z-1 ${className}`}
+      className={`absolute inset-0 w-full min-w-full h-full min-h-screen pointer-events-none overflow-hidden select-none z-1 hero-wave-bg ${className}`}
       style={{
         opacity,
         mixBlendMode: blendMode,
       }}
       aria-hidden="true"
     >
-      <canvas ref={canvasRef} className="w-full h-full min-h-screen block" />
+      <canvas ref={canvasRef} className="w-full h-full block" />
     </div>
   );
 }
