@@ -125,6 +125,7 @@ function splitElement(element, type = "chars") {
     return chars;
   }
 
+  element.innerHTML = "";
   const words = text.split(" ");
 
   words.forEach((word, wordIdx) => {
